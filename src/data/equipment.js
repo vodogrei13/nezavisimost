@@ -470,6 +470,16 @@ export const machines = records.map(([slug,name,category,capacity]) => {
  const workingHeight=heightText ? Number(heightText.match(/\d+/)?.[0]) : null;
  const platformText=basic['Грузоподъёмность платформы'];
  const platformLoad=platformText ? Number(platformText.match(/\d+/)?.[0]) : null;
- return {slug,name:category==='cranes'?`Автокран ${name}`:name,category,capacity,boomLength,workingHeight,platformLoad,image:`/equipment/${slug}.png`,specs};
-});
+  return {
+    slug,
+    name: category === 'cranes' ? `Автокран ${name}` : name,
+    category,
+    capacity,
+    boomLength,
+    workingHeight,
+    platformLoad,
+    image: `${import.meta.env.BASE_URL}equipment/${slug}.png`,
+    specs
+  };
+  });
 export const cranes=machines.filter(x=>x.category==='cranes');

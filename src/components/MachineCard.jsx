@@ -1,3 +1,4 @@
+import { sitePath } from '../utils/sitePath'
 import { useState } from "react";
 import "./MachineCard.css";
 export function MachineImage({ machine, detail = false }) {
@@ -25,14 +26,14 @@ export default function MachineCard({ machine, onOrder }) {
     <article className="machine-card">
       <a
         className="machine-card-image-link"
-        href={"/services/" + machine.slug}
+        href={sitePath("/services/" + machine.slug)}
         aria-label={"Подробнее: " + machine.name}
       >
         <MachineImage machine={machine} />
       </a>
       <div className="machine-card-body">
         <h2>
-          <a href={"/services/" + machine.slug}>{machine.name}</a>
+          <a href={sitePath("/services/" + machine.slug)}>{machine.name}</a>
         </h2>
         <div className="machine-card-actions">
           <div className="machine-highlights">

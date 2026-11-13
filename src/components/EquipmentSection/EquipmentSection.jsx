@@ -1,3 +1,4 @@
+import { sitePath } from '../../utils/sitePath'
 import { useState } from "react";
 import MachineCard from "../MachineCard";
 import MachineRequestModal from "../MachineRequestModal";
@@ -27,7 +28,7 @@ export default function EquipmentSection() {
             </h2>
             <span className="accent-line" />
           </div>
-          <a className="btn btn-outline" href="/services">
+          <a className="btn btn-outline" href={sitePath('/services')}>
             Смотреть всю технику
           </a>
         </div>

@@ -1,3 +1,4 @@
+import { sitePath } from '../../utils/sitePath'
 import yearIcon from "../../assets/10 year.png";
 import likeIcon from "../../assets/like-icon.png";
 import kranIcon from "../../assets/kran-icon.png";
@@ -33,7 +34,7 @@ function AboutSection() {
               </div>
             ))}
           </div>
-          <a className="btn btn-outline" href="/contacts">
+          <a className="btn btn-outline" href={sitePath('/contacts')}>
             Подробнее о компании
           </a>
         </div>
