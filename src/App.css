@@ -390,7 +390,7 @@
 .about-image {
   border-radius: 10px;
   min-height: 310px;
-  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85")
+  background: url(../public/gallery/gallery-2.jpg)
     center/cover no-repeat;
 }
 .footer {
