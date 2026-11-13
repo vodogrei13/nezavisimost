@@ -13,12 +13,12 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-      background: linear-gradient(90deg, rgba(248, 250, 252, .97) 0%, rgba(248, 250, 252, .95) 6%, rgba(248, 250, 252, .86) 20%, rgba(248, 250, 252, .40) 41%, transparent 65%);
+  background: linear-gradient(90deg, rgba(248, 250, 252, 0.97) 5%, rgba(248, 250, 252, 0.95) 25%, rgba(248, 250, 252, 0.86) 29%, rgba(248, 250, 252, 0.4) 50%, rgba(0, 0, 0, 0) 60%);
 }
 .hero-section .hero-grid {
   position: relative;
   z-index: 1;
-  grid-template-columns: minmax(0, 1fr) 390px;
+  grid-template-columns: minmax(0, 1fr) 370px;
   gap: 55px;
   padding-top: 76px;
 }

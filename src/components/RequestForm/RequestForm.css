@@ -1,1 +1,21 @@
-.request-form{background:#f3f6f8;color:#101f29;border:1px solid #dce3e7;box-shadow:0 15px 45px #101f2924}.request-form p{color:#53616b}.request-form>small{color:#697781}.request-form input,.request-form select,.request-form textarea{border:1px solid #d7e0e5}.request-form h3{color:#101f29}
+.request-form {
+    background: rgba(243, 246, 248, 0.7);
+    color: #101f29;
+    border: none;
+    padding: 20px 20px;
+    box-shadow: 0 15px 45px #101f2924;
+}
+.request-form p {
+  color: #53616b;
+}
+.request-form > small {
+  color: #697781;
+}
+.request-form input,
+.request-form select,
+.request-form textarea {
+  border: 1px solid #d7e0e5;
+}
+.request-form h3 {
+  color: #101f29;
+}
