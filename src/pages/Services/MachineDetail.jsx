@@ -1,0 +1,13 @@
+import {useState} from 'react'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import MachineRequestModal from '../../components/MachineRequestModal'
+import MachineCard,{MachineImage} from '../../components/MachineCard'
+import {machines} from '../../data/equipment'
+import './Catalog.css'
+export default function MachineDetail({slug}){
+ const machine=machines.find(x=>x.slug===slug);const [selected,setSelected]=useState(null);if(!machine)return null
+ const related=machines.filter(x=>x.slug!==slug&&x.category===machine.category).sort((a,b)=>machine.capacity==null?0:Math.abs((a.capacity??999)-machine.capacity)-Math.abs((b.capacity??999)-machine.capacity)).slice(0,3)
+ const specs=machine.specs;const additional=specs['Дополнительная информация'];const main=Object.entries(specs).filter(([heading,rows])=>heading!=='Дополнительная информация'&&Object.keys(rows).length)
+ return <><Header active="services"/><main className="container machine-detail"><div className="breadcrumbs"><a href="/">Главная</a> / <a href="/services">Каталог техники</a> / {machine.name}</div><h1>{machine.name}{machine.capacity!=null?` — ${machine.capacity} тонн`:''}{machine.boomLength!=null?` — ${machine.boomLength} м`:''}</h1><div className="machine-detail-top"><MachineImage machine={machine} detail/><div className="machine-detail-info"><div className="machine-detail-cta"><div><div className="machine-detail-feature">{machine.capacity!=null?`${machine.capacity} тонн`:machine.platformLoad!=null?`${machine.platformLoad} кг`:null}</div>{machine.boomLength!=null&&<div className="machine-detail-feature">{`Стрела ${machine.boomLength} м`}</div>}</div><button className="machine-order" type="button" onClick={()=>setSelected(machine)}>Заказать {machine.category==='cranes'?'автокран':'автовышку'}</button></div><div className="machine-specs">{main.map(([heading,rows])=><section key={heading}><h2>{heading}</h2><ul>{Object.entries(rows).map(([k,v])=><li key={k}><strong>{k}:</strong> {v}</li>)}</ul></section>)}</div></div></div>{additional&&Object.keys(additional).length>0&&<section className="machine-additional"><h2>Дополнительная информация</h2><ul>{Object.entries(additional||{}).map(([k,v])=><li key={k}><strong>{k}:</strong> {v}</li>)}</ul></section>}<section className="machine-alternatives"><div className="machine-alternatives-heading"><h2>Подобрать другую технику</h2><a href="/services">Смотреть весь каталог →</a></div><div className="machine-alt-grid">{related.map(m=><MachineCard key={m.slug} machine={m} onOrder={setSelected}/>)}</div></section></main><Footer/><MachineRequestModal machine={selected} onClose={()=>setSelected(null)}/></>
+}

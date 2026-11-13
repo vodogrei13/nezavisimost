@@ -1,0 +1,11 @@
+.machine-modal-backdrop{position:fixed;inset:0;z-index:10000;background:rgba(8,22,32,.68);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px)}
+.machine-modal{position:relative;width:min(100%,440px);background:#fff;border-radius:22px;padding:34px;box-shadow:0 30px 100px #08162166;color:#101f29}
+.machine-modal-close{position:absolute;right:17px;top:13px;border:0;background:#f3f6f8;border-radius:50%;height:35px;width:35px;font-size:25px;cursor:pointer;color:#101f29}
+.machine-modal-eyebrow{font-size:12px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#8d2434;margin-bottom:9px}
+.machine-modal h2{font-size:25px;line-height:1.25;margin:0 25px 15px 0}
+.machine-modal p{color:#68747c;font-size:14px;line-height:1.5;margin:0 0 22px}
+.machine-modal form{display:grid;gap:17px}.machine-modal label{display:grid;gap:8px;font-size:14px;font-weight:700}
+.machine-modal input{width:100%;padding:14px 15px;border:1px solid #d7dde2;border-radius:10px;font:inherit;box-sizing:border-box;outline-offset:3px}
+.machine-modal input:focus{border-color:#8d2434}.machine-modal-submit{width:100%;border:0;border-radius:10px;background:#8d2434;color:#fff;font:inherit;font-weight:750;padding:15px;cursor:pointer}.machine-modal-submit:hover{background:#731b2a}
+.machine-modal small{color:#77828b;text-align:center;font-size:12px}.machine-modal-ready{display:grid;gap:14px}.machine-modal-ready p{margin:0}.machine-modal-summary{display:grid;gap:8px;padding:14px;background:#f3f6f8;border-radius:10px;font-size:14px}
+@media(max-width:500px){.machine-modal{padding:27px 21px}}

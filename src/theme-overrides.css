@@ -1,0 +1,70 @@
+:root {
+  --yellow: #8d2434;
+  --yellow2: #8d2434;
+  --brand: #8d2434;
+  --graphite: #101f29;
+  --light: #f3f6f8;
+  --header-yellow: #f7b916;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+.btn-primary {
+  background: #8d2434;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #741b2a;
+  box-shadow: 0 7px 18px #8d243433;
+}
+.main-nav a.active:after,
+.main-nav a:hover:after,
+.accent-line {
+  background: #8d2434;
+}
+.why h2 em {
+  color: #f3f6f8;
+}
+.equipment-bottom a {
+  background: #f7e9ec;
+  color: #8d2434;
+}
+.map-pin {
+  background: #8d2434;
+  color: white;
+}
+.hero-section .benefits-row img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+.hero-section .benefits-row > div {
+  grid-template-columns: 45px 1fr;
+  column-gap: 16px;
+}
+.hero-section .benefits-row b {
+  font-size: 17px;
+}
+.hero-section .benefits-row small {
+  font-size: 14px;
+}
+.hero-section .request-form {
+  box-shadow: 0 18px 50px #101f292b;
+}
+#request {
+  scroll-margin-top: 90px;
+}
+@media (max-width: 720px) {
+  .header-btn {
+    display: inline-flex;
+    font-size: 12px;
+    padding: 9px;
+  }
+  .site-header .header-inner {
+    gap: 9px;
+  }
+  .site-header .phone {
+    display: none;
+  }
+}

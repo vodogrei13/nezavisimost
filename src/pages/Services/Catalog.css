@@ -1,0 +1,242 @@
+.machine-catalog,
+.machine-detail {
+  padding-top: 52px;
+  padding-bottom: 90px;
+}
+.machine-catalog h1,
+.machine-detail h1 {
+  font-size: clamp(32px, 4vw, 54px);
+  margin: 18px 0;
+}
+.machine-catalog > p {
+  color: #68727a;
+}
+.machine-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 34px 0 18px;
+}
+.machine-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.machine-filters button {
+  background: #f3f6f8;
+  border: 1px solid #e1e5e8;
+  border-radius: 9px;
+  padding: 12px 20px;
+  color: #101f29;
+  cursor: pointer;
+}
+.machine-filters button.selected {
+  background: #8d2434;
+  color: #fff;
+  border-color: #8d2434;
+}
+.machine-toolbar select {
+  padding: 10px;
+  border: 1px solid #dce1e5;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+.machine-count {
+  font-size: 14px;
+}
+.machine-request {
+  max-width: 640px;
+  margin: 55px auto 0;
+  scroll-margin-top: 100px;
+}
+@media (max-width: 1080px) {
+  .machine-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .machine-detail-top {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .machine-grid,
+  .machine-alt-grid {
+    grid-template-columns: 1fr;
+  }
+  .machine-catalog,
+  .machine-detail {
+    padding-top: 25px;
+  }
+  .machine-visual {
+    height: 245px;
+  }
+  .machine-detail-top > .machine-visual {
+    height: 300px;
+  }
+  .machine-card h2 {
+    min-height: 0;
+  }
+  .machine-highlight strong {
+    font-size: 21px;
+  }
+}
+/* Page-specific overrides. Card styles are shared via MachineCard.css. */
+.machine-grid,
+.machine-alt-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 46px 80px;
+}
+.machine-param-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 17px 20px;
+  background: #f3f6f8;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.machine-param-filters label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 650;
+  color: #101f29;
+}
+.machine-param-filters select {
+  min-width: 170px;
+  padding: 11px 12px;
+  border: 1px solid #dce1e5;
+  border-radius: 8px;
+  background: #fff;
+  color: #101f29;
+}
+.machine-param-filters select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.machine-detail-top {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 48px;
+}
+.machine-detail-top > .machine-visual {
+  height: 440px;
+  border-radius: 20px;
+}
+.machine-detail-top > .machine-visual img {
+  width: 102%;
+  height: 94%;
+}
+.machine-detail-info {
+  min-width: 0;
+}
+.machine-detail-cta {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8rem;
+    margin-bottom: 26px;
+}
+.machine-detail-cta .machine-order {
+  width: auto;
+  min-width: 190px;
+  margin: 0;
+}
+.machine-detail-feature {
+  font-size: 19px;
+  font-weight: 800;
+  color: #101f29;
+  margin: 6px 0;
+}
+.machine-specs {
+  display: block;
+}
+.machine-specs section {
+  border: 0;
+  padding: 0;
+  margin: 0 0 23px;
+}
+.machine-specs h2,
+.machine-additional h2 {
+  font-size: 27px;
+  margin: 0 0 12px;
+  color: #101f29;
+}
+.machine-specs ul,
+.machine-additional ul {
+  margin: 0;
+  padding-left: 24px;
+}
+.machine-specs li,
+.machine-additional li {
+  line-height: 1.7;
+  margin: 3px 0;
+  color: #101f29;
+}
+.machine-specs li strong,
+.machine-additional li strong {
+  font-weight: 750;
+}
+.machine-additional {
+  margin-top: 48px;
+}
+.machine-alternatives-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.machine-alternatives-heading a {
+  color: #8d2434;
+}
+.machine-alt-grid a.machine-card-image-link {
+  padding: 0;
+  display: block;
+  border: 0;
+  border-radius: 0;
+}
+.machine-alt-grid .machine-card h2 a {
+  border: 0;
+  padding: 0;
+  display: inline;
+}
+@media (max-width: 1100px) {
+  .machine-grid,
+  .machine-alt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .machine-detail-top {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .machine-grid,
+  .machine-alt-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .machine-detail-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .machine-detail-cta .machine-order {
+    width: 100%;
+  }
+  .machine-detail-top > .machine-visual {
+    height: 310px;
+  }
+  .machine-alternatives-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Две колонки страницы техники: название и фото / характеристики */
+.machine-detail-top {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:start}
+.machine-detail-left {min-width:0}
+.machine-detail-left h1 {margin:0 0 24px;font-size:clamp(26px,3vw,38px);line-height:1.15}
+.machine-detail-left .machine-visual {width:100%;max-width:100%}
+.machine-detail-info {min-width:0}
+@media(max-width:850px){.machine-detail-top{grid-template-columns:1fr;gap:22px}}
