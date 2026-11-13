@@ -2,32 +2,16 @@ import { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./Gallery.css";
+const base = import.meta.env.BASE_URL;
 const photos = [
-  [
-    "Строительство торгового комплекса",
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200",
-  ],
-  [
-    "Монтаж металлоконструкций",
-    "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200",
-  ],
-  [
-    "Работы на промышленном объекте",
-    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
-  ],
-  [
-    "Строительство жилого комплекса",
-    "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200",
-  ],
-  [
-    "Подъём строительных материалов",
-    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200",
-  ],
-  [
-    "Монтаж на строительной площадке",
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200",
-  ],
+  ["Строительство торгового комплекса", `${base}gallery/gallery-1.jpg`],
+  ["Монтаж металлоконструкций", `${base}gallery/gallery-2.jpg`],
+  ["Работы на промышленном объекте", `${base}gallery/gallery-3.jpg`],
+  ["Строительство жилого комплекса", `${base}gallery/gallery-4.jpg`],
+  ["Подъём строительных материалов", `${base}gallery/gallery-5.jpg`],
+  ["Монтаж на строительной площадке", `${base}gallery/gallery-6.jpg`],
 ];
+
 function Gallery() {
   const [current, setCurrent] = useState(null);
   useEffect(() => {
