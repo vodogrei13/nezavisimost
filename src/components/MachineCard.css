@@ -267,3 +267,21 @@
   .machine-card-actions .machine-highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .machine-card-actions .machine-order { width: auto; }
 }
+
+/* Keep two cards per row on mobile, without images overlapping neighbours. */
+@media (max-width:1050px) { .machine-grid,.machine-alt-grid,.home-machine-grid {column-gap:24px;row-gap:32px;} }
+@media (max-width:720px) {
+ .machine-grid,.machine-alt-grid,.home-machine-grid {grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:25px;}
+ .machine-card {min-width:0;}
+ .machine-visual {height:clamp(115px,26vw,205px);}
+ .machine-visual img {width:108%;height:100%;}
+ .machine-blob {width:94%;left:3%;}
+ .machine-card-body {padding:12px 10px 14px;}
+ .machine-card h2 {font-size:clamp(12px,2.6vw,16px);min-height:0;line-height:1.3;overflow-wrap:anywhere;margin-bottom:10px;}
+ .machine-card-actions {gap:10px;}
+ .machine-card-actions .machine-highlights {gap:6px;}
+ .machine-card-actions .machine-highlight {padding:8px 3px;gap:3px;}
+ .machine-card-actions .machine-highlight strong {font-size:clamp(12px,2.8vw,16px);}
+ .machine-card-actions .machine-order {min-width:0;max-width:100%;min-height:38px;padding:9px 10px;font-size:12px;}
+}
+@media(max-width:380px) { .machine-grid,.machine-alt-grid,.home-machine-grid {column-gap:8px;} .machine-card-body {padding:10px 7px;} }

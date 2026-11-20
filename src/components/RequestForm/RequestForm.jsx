@@ -18,15 +18,11 @@ function RequestForm({ compact = false }) {
         <textarea placeholder="Комментарий" rows="3" />
       ) : (
         <>
-          <select defaultValue="">
-            <option value="" disabled>
-              Вид техники
-            </option>
-            <option>Автокран</option>
-            <option>Манипулятор</option>
-            <option>Экскаватор</option>
-          </select>
-          <input type="text" placeholder="Дата и время" />
+          <input name="capacity" type="text" placeholder="Необходимая грузоподъёмность (т)" aria-label="Необходимая грузоподъёмность" />
+          <input name="boom" type="text" placeholder="Необходимая стрела (м)" aria-label="Необходимая длина стрелы" />
+          <input name="location" type="text" placeholder="Место работ" aria-label="Место работ" />
+          <label className="request-date-label" htmlFor="work-date">Дата работ</label>
+          <input id="work-date" name="workDate" type="date" aria-label="Дата работ" />
         </>
       )}
       <button className="btn btn-primary" type="submit">

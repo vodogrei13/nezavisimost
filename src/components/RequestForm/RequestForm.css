@@ -19,3 +19,9 @@
 .request-form h3 {
   color: #101f29;
 }
+
+.request-form {width:100%;max-width:100%;border-radius:14px;}
+.request-form input,.request-form select,.request-form textarea {min-width:0;max-width:100%;font-size:14px;}
+.request-date-label {display:block;margin:0 0 6px;font-size:13px;font-weight:600;color:#1a1818;}
+.request-form input[type="date"] {min-height:46px;}
+@media(max-width:720px){.hero-section .request-form{padding:20px 16px;}.request-form h3{font-size:19px;}}

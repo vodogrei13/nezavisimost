@@ -1,1 +1,7 @@
 .site-header .main-nav{opacity:0;transform:translateY(-7px);pointer-events:none;transition:opacity .22s ease,transform .22s ease}.site-header:hover .main-nav,.site-header:focus-within .main-nav{opacity:1;transform:none;pointer-events:auto}.header-btn{cursor:pointer;background:#F7B916!important;color:#101F29!important;border-color:#F7B916!important}.header-btn:hover{background:#e8ab10!important}.request-modal-backdrop{position:fixed;inset:0;z-index:100;background:#101f29b5;display:grid;place-items:center;padding:20px}.request-modal{position:relative;width:min(100%,430px)}.request-modal-close{position:absolute;right:12px;top:8px;z-index:2;border:0;background:none;font-size:32px;color:#101f29;cursor:pointer}.request-modal .request-form{padding-top:40px}@media(max-width:900px){.site-header .main-nav{opacity:1;transform:none;pointer-events:auto}}
+/* Menu is visible by default and becomes high-contrast on hover/focus. */
+.site-header .main-nav { opacity:1; transform:none; pointer-events:auto; }
+.site-header .main-nav a { color:#92969a; transition:color .2s ease; }
+.site-header:hover .main-nav a,.site-header:focus-within .main-nav a { color:#1a1818; }
+.site-header .main-nav a:hover,.site-header .main-nav a:focus-visible { color:#8d2434; }
+@media (hover:none) { .site-header .main-nav a { color:#42464a; } }

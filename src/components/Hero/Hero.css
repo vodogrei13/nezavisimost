@@ -126,3 +126,10 @@
     font-size: 13px;
   }
 }
+
+/* Responsive hero, preserving the approved background image. */
+.hero-section::before { background:linear-gradient(90deg,rgba(248,250,252,.88) 0%,rgba(248,250,252,.70) 28%,rgba(248,250,252,.25) 51%,transparent 72%); }
+.hero-section .hero-grid { align-items:start; }
+.hero-section #request { min-width:0; }
+@media(max-width:900px) { .hero-section {height:auto;min-height:0;padding-bottom:45px;background-position:60% center;} .hero-section .hero-grid {grid-template-columns:minmax(0,1fr) minmax(280px,350px);gap:20px;padding-top:45px;} .hero-section::before {background:linear-gradient(90deg,rgba(248,250,252,.91),rgba(248,250,252,.65) 60%,rgba(248,250,252,.12));} .hero-section .hero-copy h1 {font-size:clamp(32px,4.5vw,48px);} }
+@media(max-width:720px) { .hero-section {background-position:60% top;background-size:auto 430px;background-color:#f3f6f8;padding-bottom:28px;} .hero-section::before {background:linear-gradient(180deg,rgba(248,250,252,.68) 0%,rgba(248,250,252,.72) 260px,#f3f6f8 430px,#f3f6f8 100%);} .hero-section .hero-grid {grid-template-columns:minmax(0,1fr);gap:22px;padding-top:36px;} .hero-section .hero-copy h1 {font-size:clamp(32px,8vw,44px);letter-spacing:-.8px;} .hero-section .hero-copy .lead {font-size:16px;} .hero-section .benefits-row {gap:12px;margin-top:22px;} .hero-section .request-form {box-shadow:0 10px 28px #0b1c2d20;} }

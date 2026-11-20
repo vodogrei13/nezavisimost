@@ -824,3 +824,27 @@ body {
     font-size: 14px;
   }
 }
+
+/* Site-wide mobile layout refinements; keep existing brand palette. */
+body {color:#1a1818;overflow-x:hidden;}
+.site-header,.site-header .header-inner {max-width:100%;}
+@media(max-width:900px) {.header-inner {gap:12px;} .main-nav {gap:12px;} .main-nav a {font-size:14px;} }
+@media(max-width:720px) {
+ .container {width:calc(100% - 28px);}
+ .site-header {height:auto;}
+ .header-inner {min-height:0;display:flex;flex-wrap:wrap;gap:8px 12px;padding:9px 0;}
+ .main-nav {order:3;flex:0 0 100%;height:auto;min-height:34px;display:flex;gap:8px;justify-content:space-between;overflow-x:auto;}
+ .main-nav a {height:34px;flex:0 0 auto;font-size:clamp(11px,2.7vw,14px);white-space:nowrap;}
+ .header-btn {display:inline-flex;padding:9px 10px;font-size:11px;white-space:nowrap;}
+ .brand {margin-right:auto;}
+ .brand img {max-height:40px;width:auto;}
+ .phone {display:none;}
+ .hero-section {padding-bottom:28px;}
+ .hero-grid {grid-template-columns:minmax(0,1fr);}
+ .equipment-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+ .section-heading {flex-wrap:wrap;}
+ .footer-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+ .gallery-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+ img {height:auto;}
+}
+@media(max-width:390px){.header-btn{font-size:10px;padding:8px;}.brand b{font-size:12px;}.main-nav{gap:6px;}}

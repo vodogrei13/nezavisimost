@@ -1,1 +1,16 @@
-.about p{font-size:17px;line-height:1.75}.about .stats img{width:42px;height:42px;object-fit:contain;margin-bottom:12px}.about .stats b{font-size:16px}.about .stats small{font-size:13px}
+.about p {
+  font-size: 17px;
+  line-height: 1.75;
+}
+.about .stats img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.about .stats b {
+  font-size: 16px;
+}
+.about .stats small {
+  font-size: 13px;
+}
